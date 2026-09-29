@@ -124,7 +124,7 @@ git init
 git add .
 git commit -m "init: vue blog"
 git branch -M main
-git remote add origin https://github.com/<你的用户名>/HmMcTechBlog.git
+git remote add origin https://github.com/cmd0616/HmMcTechBlog.git
 git push -u origin main
 ```
 
