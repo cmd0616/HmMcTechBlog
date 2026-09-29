@@ -1,0 +1,15 @@
+[       9ms] [LOG] [dbg] before-leave @ http://127.0.0.1:5173/src/App.vue:53
+[      17ms] [LOG] [dbg] leave @ http://127.0.0.1:5173/src/App.vue:54
+[     210ms] [LOG] [dbg] after-leave @ http://127.0.0.1:5173/src/App.vue:55
+[  538847ms] [LOG] [dbg] before-enter @ http://127.0.0.1:5173/src/App.vue:50
+[  538847ms] [LOG] [dbg] enter @ http://127.0.0.1:5173/src/App.vue:51
+[  539075ms] [LOG] [dbg] after-enter @ http://127.0.0.1:5173/src/App.vue:52
+[  640576ms] [LOG] [dbg] before-leave @ http://127.0.0.1:5173/src/App.vue:53
+[  640578ms] [LOG] [dbg] leave @ http://127.0.0.1:5173/src/App.vue:54
+[  640765ms] [LOG] [dbg] before-enter @ http://127.0.0.1:5173/src/App.vue:50
+[  640765ms] [LOG] [dbg] after-leave @ http://127.0.0.1:5173/src/App.vue:55
+[  640765ms] [LOG] [dbg] enter @ http://127.0.0.1:5173/src/App.vue:51
+[  640955ms] [LOG] [dbg] after-enter @ http://127.0.0.1:5173/src/App.vue:52
+[  663718ms] [LOG] [dbg] before-leave @ http://127.0.0.1:5173/src/App.vue:53
+[  663719ms] [LOG] [dbg] leave @ http://127.0.0.1:5173/src/App.vue:54
+[  663905ms] [LOG] [dbg] after-leave @ http://127.0.0.1:5173/src/App.vue:55

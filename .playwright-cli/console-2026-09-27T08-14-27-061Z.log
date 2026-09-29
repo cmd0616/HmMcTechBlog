@@ -1,0 +1,4 @@
+[     285ms] [LOG] [dbg] before-enter @ http://127.0.0.1:5173/src/App.vue:50
+[     285ms] [LOG] [dbg] enter @ http://127.0.0.1:5173/src/App.vue:51
+[     349ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:5173/favicon.ico:0
+[     525ms] [LOG] [dbg] after-enter @ http://127.0.0.1:5173/src/App.vue:52

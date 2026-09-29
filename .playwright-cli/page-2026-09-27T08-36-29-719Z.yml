@@ -1,0 +1,41 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "H HmMcTechBlog 5 领域 · 5 篇文章" [ref=f1e6] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=f1e7]: H
+        - generic [ref=f1e8]:
+          - generic [ref=f1e9]:
+            - text: HmMc
+            - emphasis [ref=f1e10]: TechBlog
+          - generic [ref=f1e11]: 5 领域 · 5 篇文章
+      - searchbox "搜索文章…" [ref=f1e12]
+      - button "切换到亮色主题" [ref=f1e14] [cursor=pointer]
+  - generic [ref=f1e17]:
+    - complementary [ref=f1e18]:
+      - navigation [ref=f1e19]:
+        - link "关于本项目" [ref=f1e21] [cursor=pointer]:
+          - /url: "#/post/about"
+        - generic [ref=f1e24]:
+          - generic [ref=f1e25]: 知识领域
+          - generic [ref=f1e26]:
+            - generic [ref=f1e27] [cursor=pointer]:
+              - generic [ref=f1e31]: 前端
+              - generic [ref=f1e32]: "1"
+            - link "现代 CSS 开发指南：容器查询与 :has() 选择器" [ref=f1e34] [cursor=pointer]:
+              - /url: "#/post/frontend-modern-css"
+          - generic [ref=f1e38] [cursor=pointer]:
+            - generic [ref=f1e42]: 后端
+            - generic [ref=f1e43]: "1"
+          - generic [ref=f1e45] [cursor=pointer]:
+            - generic [ref=f1e49]: 嵌入式
+            - generic [ref=f1e50]: "1"
+          - generic [ref=f1e52] [cursor=pointer]:
+            - generic [ref=f1e56]: 安全
+            - generic [ref=f1e57]: "1"
+          - generic [ref=f1e59] [cursor=pointer]:
+            - generic [ref=f1e63]: 架构
+            - generic [ref=f1e64]: "1"
+        - link "GitHub" [ref=f1e66] [cursor=pointer]:
+          - /url: https://github.com/your-name/HmMcTechBlog
+    - main [ref=f1e74]

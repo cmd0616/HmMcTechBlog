@@ -1,0 +1,95 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "H HmMcTechBlog 5 领域 · 7 篇文章" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e7]: H
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - text: HmMc
+            - emphasis [ref=e10]: TechBlog
+          - generic [ref=e11]: 5 领域 · 7 篇文章
+      - searchbox "搜索文章…" [ref=e12]
+      - button "切换到亮色主题" [ref=e14] [cursor=pointer]
+  - generic [ref=e17]:
+    - complementary [ref=e18]:
+      - navigation [ref=e19]:
+        - link "关于本项目" [ref=e21] [cursor=pointer]:
+          - /url: "#/post/about"
+        - generic [ref=e24]:
+          - generic [ref=e25]: 知识领域
+          - generic [ref=e27] [cursor=pointer]:
+            - generic [ref=e31]: 安全
+            - generic [ref=e32]: "1"
+          - generic [ref=e34] [cursor=pointer]:
+            - generic [ref=e38]: 后端
+            - generic [ref=e39]: "1"
+          - generic [ref=e41] [cursor=pointer]:
+            - generic [ref=e45]: 架构
+            - generic [ref=e46]: "1"
+          - generic [ref=e48] [cursor=pointer]:
+            - generic [ref=e52]: 前端
+            - generic [ref=e53]: "3"
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e59]: 嵌入式
+            - generic [ref=e60]: "1"
+        - link "GitHub" [ref=e62] [cursor=pointer]:
+          - /url: https://github.com/your-name/HmMcTechBlog
+    - main [ref=e70]:
+      - generic [ref=e72]:
+        - link "css 二级目录测试 临时文件，验证完即删除 2026-09-27 1 min" [ref=e73] [cursor=pointer]:
+          - /url: "#/post/tmp-l2"
+          - generic [ref=e74]: css
+          - heading "二级目录测试" [level=3] [ref=e75]
+          - paragraph [ref=e76]: 临时文件，验证完即删除
+          - generic [ref=e77]:
+            - generic [ref=e78]: 2026-09-27
+            - generic [ref=e79]: 1 min
+        - link "layout 三级目录测试 临时文件，验证完即删除 2026-09-27 1 min" [ref=e80] [cursor=pointer]:
+          - /url: "#/post/tmp-l3"
+          - generic [ref=e81]: layout
+          - heading "三级目录测试" [level=3] [ref=e82]
+          - paragraph [ref=e83]: 临时文件，验证完即删除
+          - generic [ref=e84]:
+            - generic [ref=e85]: 2026-09-27
+            - generic [ref=e86]: 1 min
+        - link "前端 现代 CSS 开发指南：容器查询与 :has() 选择器 CSS 早已不是当年的样式表，容器查询、:has() 父选择器、级联层等新特性正在改变组件化开发的思路。 2026-09-20 2 min" [ref=e87] [cursor=pointer]:
+          - /url: "#/post/frontend-modern-css"
+          - generic [ref=e88]: 前端
+          - heading "现代 CSS 开发指南：容器查询与 :has() 选择器" [level=3] [ref=e89]
+          - paragraph [ref=e90]: CSS 早已不是当年的样式表，容器查询、:has() 父选择器、级联层等新特性正在改变组件化开发的思路。
+          - generic [ref=e91]:
+            - generic [ref=e92]: 2026-09-20
+            - generic [ref=e93]: 2 min
+        - link "后端 RESTful API 设计最佳实践与常见误区 从资源建模、状态码语义到版本管理，聊聊设计一个「对开发者友好」的 API 接口需要哪些考量。 2026-09-15 2 min" [ref=e94] [cursor=pointer]:
+          - /url: "#/post/backend-restful-design"
+          - generic [ref=e95]: 后端
+          - heading "RESTful API 设计最佳实践与常见误区" [level=3] [ref=e96]
+          - paragraph [ref=e97]: 从资源建模、状态码语义到版本管理，聊聊设计一个「对开发者友好」的 API 接口需要哪些考量。
+          - generic [ref=e98]:
+            - generic [ref=e99]: 2026-09-15
+            - generic [ref=e100]: 2 min
+        - link "嵌入式 嵌入式入门：从裸机到 RTOS 的思维转变 当你从 while(1) 大循环转向 FreeRTOS 任务调度，需要重新理解并发、优先级与资源共享。 2026-09-10 2 min" [ref=e101] [cursor=pointer]:
+          - /url: "#/post/embedded-rtos-notes"
+          - generic [ref=e102]: 嵌入式
+          - heading "嵌入式入门：从裸机到 RTOS 的思维转变" [level=3] [ref=e103]
+          - paragraph [ref=e104]: 当你从 while(1) 大循环转向 FreeRTOS 任务调度，需要重新理解并发、优先级与资源共享。
+          - generic [ref=e105]:
+            - generic [ref=e106]: 2026-09-10
+            - generic [ref=e107]: 2 min
+        - link "安全 Web 安全入门：OWASP Top 10 速览与防御思路 SQL 注入、XSS、CSRF…… 这些高频漏洞的原理并不复杂，关键是建立「不信任任何输入」的安全意识。 2026-09-05 2 min" [ref=e108] [cursor=pointer]:
+          - /url: "#/post/security-web-top10"
+          - generic [ref=e109]: 安全
+          - heading "Web 安全入门：OWASP Top 10 速览与防御思路" [level=3] [ref=e110]
+          - paragraph [ref=e111]: SQL 注入、XSS、CSRF…… 这些高频漏洞的原理并不复杂，关键是建立「不信任任何输入」的安全意识。
+          - generic [ref=e112]:
+            - generic [ref=e113]: 2026-09-05
+            - generic [ref=e114]: 2 min
+        - link "架构 架构漫谈：从单体到微服务的演进之路 微服务不是银弹。本文梳理系统拆分的时机、服务治理的核心问题，以及分布式带来的新挑战。 2026-08-28 2 min" [ref=e115] [cursor=pointer]:
+          - /url: "#/post/arch-distributed-basics"
+          - generic [ref=e116]: 架构
+          - heading "架构漫谈：从单体到微服务的演进之路" [level=3] [ref=e117]
+          - paragraph [ref=e118]: 微服务不是银弹。本文梳理系统拆分的时机、服务治理的核心问题，以及分布式带来的新挑战。
+          - generic [ref=e119]:
+            - generic [ref=e120]: 2026-08-28
+            - generic [ref=e121]: 2 min

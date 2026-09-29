@@ -1,0 +1,104 @@
+- generic [ref=f3e2]:
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - link "HmMc TechBlog HmMcTechBlog 5 领域 · 5 篇文章" [ref=f3e6] [cursor=pointer]:
+        - /url: "#/"
+        - img "HmMc TechBlog" [ref=f3e7]
+        - generic [ref=f3e8]:
+          - generic [ref=f3e9]:
+            - text: HmMc
+            - emphasis [ref=f3e10]: TechBlog
+          - generic [ref=f3e11]: 5 领域 · 5 篇文章
+      - searchbox "搜索文章…" [ref=f3e12]
+      - button "切换到亮色主题" [ref=f3e14] [cursor=pointer]
+  - generic [ref=f3e17]:
+    - complementary [ref=f3e18]:
+      - navigation [ref=f3e19]:
+        - link "关于本项目" [ref=f3e21] [cursor=pointer]:
+          - /url: "#/post/about"
+        - generic [ref=f3e24]:
+          - generic [ref=f3e25]: 知识领域
+          - generic [ref=f3e27] [cursor=pointer]:
+            - generic [ref=f3e31]: 安全
+            - generic [ref=f3e32]: "1"
+          - generic [ref=f3e34] [cursor=pointer]:
+            - generic [ref=f3e38]: 后端
+            - generic [ref=f3e39]: "1"
+          - generic [ref=f3e41] [cursor=pointer]:
+            - generic [ref=f3e45]: 架构
+            - generic [ref=f3e46]: "1"
+          - generic [ref=f3e47]:
+            - generic [ref=f3e48] [cursor=pointer]:
+              - generic [ref=f3e52]: 前端
+              - generic [ref=f3e53]: "1"
+            - link "现代 CSS 开发指南：容器查询与 :has() 选择器" [ref=f3e55] [cursor=pointer]:
+              - /url: "#/post/frontend-modern-css"
+          - generic [ref=f3e59] [cursor=pointer]:
+            - generic [ref=f3e63]: 嵌入式
+            - generic [ref=f3e64]: "1"
+        - link "GitHub" [ref=f3e66] [cursor=pointer]:
+          - /url: https://github.com/your-name/HmMcTechBlog
+    - main [ref=f3e74]:
+      - article [ref=f3e76]:
+        - generic [ref=f3e77]:
+          - heading "现代 CSS 开发指南：容器查询与 :has() 选择器" [level=1] [ref=f3e78]
+          - generic [ref=f3e79]:
+            - generic [ref=f3e80]: 2026-09-20
+            - generic [ref=f3e81]: 预计阅读 2 分钟
+            - generic [ref=f3e82]: 约 708 字
+        - generic [ref=f3e83]:
+          - heading "为什么需要容器查询" [level=2] [ref=f3e84]
+          - paragraph [ref=f3e85]:
+            - text: 媒体查询
+            - code [ref=f3e86]: "@media"
+            - text: 只能响应
+            - strong [ref=f3e87]: 视口
+            - text: 尺寸，但组件化的今天，我们更希望组件根据
+            - strong [ref=f3e88]: 自身容器
+            - text: 的尺寸自适应：
+          - code [ref=f3e90]: ".card-container { container-type: inline-size; container-name: card; } @container card (min-width: 400px) { .card { display: grid; grid-template-columns: 1fr 2fr; } }"
+          - paragraph [ref=f3e91]:
+            - text: 同一个组件，放在侧边栏是纵向布局，放在主内容区自动变成横向布局——
+            - strong [ref=f3e92]: 无需任何 JS
+            - text: 。
+          - heading ":has() —— 时隔多年的「父选择器」" [level=2] [ref=f3e93]
+          - code [ref=f3e95]: "/* 表单项有校验错误时高亮整个 field */ .form-item:has(.error) { border-color: #ef4444; } /* 选中卡片时给卡片加阴影 */ .card:has(input:checked) { box-shadow: 0 0 0 2px var(--accent); }"
+          - heading "级联层 @layer" [level=2] [ref=f3e96]
+          - paragraph [ref=f3e97]: 解决第三方库样式覆盖的老大难问题：
+          - code [ref=f3e99]: "@layer reset, base, components, utilities; @layer components { .btn { /* 我们的按钮样式 */ } }"
+          - heading "小结" [level=2] [ref=f3e100]
+          - table [ref=f3e101]:
+            - rowgroup [ref=f3e102]:
+              - row [ref=f3e103]:
+                - columnheader "特性" [ref=f3e104]
+                - columnheader "解决的问题" [ref=f3e105]
+                - columnheader "兼容性" [ref=f3e106]
+            - rowgroup [ref=f3e107]:
+              - row [ref=f3e108]:
+                - cell "容器查询" [ref=f3e109]
+                - cell "组件级响应式" [ref=f3e110]
+                - cell "现代浏览器全支持" [ref=f3e111]
+              - row [ref=f3e112]:
+                - cell [ref=f3e113]:
+                  - code [ref=f3e114]: :has()
+                - cell "父级/前置选择" [ref=f3e115]
+                - cell "现代浏览器全支持" [ref=f3e116]
+              - row [ref=f3e117]:
+                - cell [ref=f3e118]:
+                  - code [ref=f3e119]: "@layer"
+                - cell "样式优先级管理" [ref=f3e120]
+                - cell "现代浏览器全支持" [ref=f3e121]
+          - paragraph [ref=f3e122]:
+            - text: 拥抱新特性，同时用
+            - code [ref=f3e123]: "@supports"
+            - text: 做渐进增强，是当下写 CSS 的最佳姿势。
+        - generic [ref=f3e124]:
+          - generic [ref=f3e125]:
+            - link "在 GitHub 上编辑此页面" [ref=f3e126] [cursor=pointer]:
+              - /url: https://github.com/your-name/HmMcTechBlog/edit/main/posts/frontend-modern-css.md
+            - generic [ref=f3e129]: "Last updated: 2026/9/26 16:24"
+          - navigation [ref=f3e130]:
+            - link "下一页 RESTful API 设计最佳实践与常见误区" [ref=f3e131] [cursor=pointer]:
+              - /url: "#/post/backend-restful-design"
+              - generic [ref=f3e132]: 下一页
+              - generic [ref=f3e133]: RESTful API 设计最佳实践与常见误区

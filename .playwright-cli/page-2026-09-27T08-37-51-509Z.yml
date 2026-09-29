@@ -1,0 +1,46 @@
+- generic [ref=f2e2]:
+  - banner [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link "H HmMcTechBlog 5 领域 · 5 篇文章" [ref=f2e6] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=f2e7]: H
+        - generic [ref=f2e8]:
+          - generic [ref=f2e9]:
+            - text: HmMc
+            - emphasis [ref=f2e10]: TechBlog
+          - generic [ref=f2e11]: 5 领域 · 5 篇文章
+      - searchbox "搜索文章…" [ref=f2e12]: CSS
+      - button "切换到亮色主题" [ref=f2e14] [cursor=pointer]
+  - generic [ref=f2e17]:
+    - complementary [ref=f2e18]:
+      - navigation [ref=f2e19]:
+        - link "关于本项目" [ref=f2e21] [cursor=pointer]:
+          - /url: "#/post/about"
+        - generic [ref=f2e24]:
+          - generic [ref=f2e25]: 知识领域
+          - generic [ref=f2e27] [cursor=pointer]:
+            - generic [ref=f2e31]: 前端
+            - generic [ref=f2e32]: "1"
+          - generic [ref=f2e34] [cursor=pointer]:
+            - generic [ref=f2e38]: 后端
+            - generic [ref=f2e39]: "1"
+          - generic [ref=f2e41] [cursor=pointer]:
+            - generic [ref=f2e45]: 嵌入式
+            - generic [ref=f2e46]: "1"
+          - generic [ref=f2e48] [cursor=pointer]:
+            - generic [ref=f2e52]: 安全
+            - generic [ref=f2e53]: "1"
+          - generic [ref=f2e55] [cursor=pointer]:
+            - generic [ref=f2e59]: 架构
+            - generic [ref=f2e60]: "1"
+        - link "GitHub" [ref=f2e62] [cursor=pointer]:
+          - /url: https://github.com/your-name/HmMcTechBlog
+    - main [ref=f2e70]:
+      - link "前端 现代 CSS 开发指南：容器查询与 :has() 选择器 CSS 早已不是当年的样式表，容器查询、:has() 父选择器、级联层等新特性正在改变组件化开发的思路。 2026-09-20 2 min" [ref=f2e73] [cursor=pointer]:
+        - /url: "#/post/frontend-modern-css"
+        - generic [ref=f2e74]: 前端
+        - heading "现代 CSS 开发指南：容器查询与 :has() 选择器" [level=3] [ref=f2e75]
+        - paragraph [ref=f2e76]: CSS 早已不是当年的样式表，容器查询、:has() 父选择器、级联层等新特性正在改变组件化开发的思路。
+        - generic [ref=f2e77]:
+          - generic [ref=f2e78]: 2026-09-20
+          - generic [ref=f2e79]: 2 min

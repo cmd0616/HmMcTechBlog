@@ -1,0 +1,112 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "HmMc TechBlog HmMcTechBlog 5 领域 · 5 篇文章" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+        - img "HmMc TechBlog" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - text: HmMc
+            - emphasis [ref=e10]: TechBlog
+          - generic [ref=e11]: 5 领域 · 5 篇文章
+      - searchbox "搜索文章…" [ref=e12]
+      - button "切换到亮色主题" [ref=e14] [cursor=pointer]
+  - generic [ref=e17]:
+    - complementary [ref=e18]:
+      - navigation [ref=e19]:
+        - link "关于本项目" [ref=e21] [cursor=pointer]:
+          - /url: "#/post/about"
+        - generic [ref=e24]:
+          - generic [ref=e25]: 知识领域
+          - generic [ref=e26]:
+            - generic [ref=e27] [cursor=pointer]:
+              - generic [ref=e31]: 安全
+              - generic [ref=e32]: "1"
+            - link "Web 安全入门：OWASP Top 10 速览与防御思路" [ref=e34] [cursor=pointer]:
+              - /url: "#/post/security-web-top10"
+          - generic [ref=e38] [cursor=pointer]:
+            - generic [ref=e42]: 后端
+            - generic [ref=e43]: "1"
+          - generic [ref=e45] [cursor=pointer]:
+            - generic [ref=e49]: 架构
+            - generic [ref=e50]: "1"
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e56]: 前端
+            - generic [ref=e57]: "1"
+          - generic [ref=e59] [cursor=pointer]:
+            - generic [ref=e63]: 嵌入式
+            - generic [ref=e64]: "1"
+        - link "GitHub" [ref=e66] [cursor=pointer]:
+          - /url: https://github.com/your-name/HmMcTechBlog
+    - main [ref=e74]:
+      - article [ref=e76]:
+        - generic [ref=e77]:
+          - heading "Web 安全入门：OWASP Top 10 速览与防御思路" [level=1] [ref=e78]
+          - generic [ref=e79]:
+            - generic [ref=e80]: 2026-09-05
+            - generic [ref=e81]: 预计阅读 2 分钟
+            - generic [ref=e82]: 约 736 字
+        - generic [ref=e83]:
+          - blockquote [ref=e84]:
+            - paragraph [ref=e85]:
+              - text: 核心原则只有一条：
+              - strong [ref=e86]: 不信任任何来自用户的输入。
+          - heading "注入类漏洞" [level=2] [ref=e87]
+          - heading "SQL 注入" [level=3] [ref=e88]
+          - code [ref=e90]: "-- 用户输入: ' OR '1'='1 SELECT * FROM users WHERE name = '' OR '1'='1' -- AND pwd = '...';"
+          - paragraph [ref=e91]:
+            - strong [ref=e92]: 防御：参数化查询，永不拼接 SQL
+          - code [ref=e94]: cursor.execute("SELECT * FROM users WHERE name = %s", (name,))
+          - heading "XSS（跨站脚本）" [level=3] [ref=e95]
+          - paragraph [ref=e96]: 用户提交的内容中携带脚本，在其他用户浏览器中执行。
+          - paragraph [ref=e97]:
+            - strong [ref=e98]: 防御：输出转义 + CSP 响应头
+          - code [ref=e100]: "Content-Security-Policy: default-src 'self'"
+          - heading "CSRF（跨站请求伪造）" [level=2] [ref=e101]
+          - paragraph [ref=e102]: 攻击者诱导已登录用户在第三方页面发起伪造请求。
+          - paragraph [ref=e103]:
+            - strong [ref=e104]: 防御：
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - text: 使用
+              - code [ref=e107]: SameSite=Lax/Strict
+              - text: Cookie
+            - listitem [ref=e108]: 关键操作携带 CSRF Token
+            - listitem [ref=e109]:
+              - code [ref=e110]: GET
+              - text: 请求必须无副作用
+          - heading "认证与会话" [level=2] [ref=e111]
+          - list [ref=e112]:
+            - listitem [ref=e113]:
+              - text: 密码必须使用
+              - strong [ref=e114]: bcrypt / argon2
+              - text: 等慢哈希，而不是 MD5/SHA256
+            - listitem [ref=e115]: 登录失败统一提示「用户名或密码错误」，避免用户枚举
+            - listitem [ref=e116]:
+              - text: 会话 Cookie 设置
+              - code [ref=e117]: HttpOnly
+              - text: +
+              - code [ref=e118]: Secure
+          - heading "失效的访问控制" [level=2] [ref=e119]
+          - code [ref=e121]: "# 错误：只依赖前端隐藏按钮 # 正确：后端每个接口都校验权限 if article.owner_id != current_user.id: abort(403)"
+          - heading "学习路线建议" [level=2] [ref=e122]
+          - list [ref=e123]:
+            - listitem [ref=e124]: 靶场练习：DVWA、PortSwigger Academy（免费且体系化）
+            - listitem [ref=e125]: 工具：Burp Suite、SQLMap、dirsearch
+            - listitem [ref=e126]: 阅读 CVE 报告，理解真实漏洞的形成链路
+          - paragraph [ref=e127]:
+            - strong [ref=e128]: 安全的本质是攻击面管理，而不是堆砌工具。
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - link "在 GitHub 上编辑此页面" [ref=e131] [cursor=pointer]:
+              - /url: https://github.com/your-name/HmMcTechBlog/edit/main/posts/security-web-top10.md
+            - generic [ref=e134]: "Last updated: 2026/9/27 13:34"
+          - navigation [ref=e135]:
+            - link "上一页 嵌入式入门：从裸机到 RTOS 的思维转变" [ref=e136] [cursor=pointer]:
+              - /url: "#/post/embedded-rtos-notes"
+              - generic [ref=e137]: 上一页
+              - generic [ref=e138]: 嵌入式入门：从裸机到 RTOS 的思维转变
+            - link "下一页 架构漫谈：从单体到微服务的演进之路" [ref=e139] [cursor=pointer]:
+              - /url: "#/post/arch-distributed-basics"
+              - generic [ref=e140]: 下一页
+              - generic [ref=e141]: 架构漫谈：从单体到微服务的演进之路
