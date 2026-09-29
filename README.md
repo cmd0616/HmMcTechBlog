@@ -131,10 +131,11 @@ git push -u origin main
 2. 仓库 **Settings → Pages → Build and deployment**，Source 选择 **GitHub Actions**
 
 3. 之后每次 push 到 `main`，Actions 自动构建部署，1~2 分钟后生效。
-   访问：`https://<你的用户名>.github.io/HmMcTechBlog/`
+   访问：https://cmd0616.github.io/HmMcTechBlog/
 
 > 项目使用相对路径 + hash 路由，无论部署在仓库名子路径还是自定义域名下都无需改任何配置。
-> 记得把 `src/config/site.js` 里的 `github` 地址改成你的仓库。
+> `src/config/site.js` 的 `SITE.github` 已配置为 https://github.com/cmd0616/HmMcTechBlog，
+> 文末「在 GitHub 上编辑此页面」按钮指向的就是它。
 
 ## 后续可扩展方向
 

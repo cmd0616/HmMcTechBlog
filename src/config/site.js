@@ -38,7 +38,7 @@ export const SITE = {
   title: 'HmMc 技术博客',
   motto: '探索技术的无限可能',
   desc: '记录技术领域的学习笔记与实战经验，欢迎交流指正。',
-  github: 'https://github.com/your-name/HmMcTechBlog', // TODO: 改成你的仓库地址
+  github: 'https://github.com/cmd0616/HmMcTechBlog', // 文末「在 GitHub 上编辑此页面」链接使用
   branch: 'main', // 「在 GitHub 上编辑此页面」链接使用的分支
 }
 

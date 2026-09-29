@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 完整历史：保证「Last updated」能取到每篇文件的真实提交时间
 
       - uses: actions/setup-node@v4
         with:
@@ -29,6 +31,8 @@ jobs:
       - run: npm run build
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true # 仓库尚未开启 Pages 时自动开启，避免 "Get Pages site failed"
 
       - uses: actions/upload-pages-artifact@v3
         with:
