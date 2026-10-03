@@ -9,6 +9,9 @@ date: 2026-09-27
 
 HmMcTechBlog 是我的个人开源技术博客，基于 **Vue 3 + Vite** 构建，
 通过 GitHub Actions 自动构建并部署到 GitHub Pages。
+用来分享一些技术心得，以及一些有趣的项目。
+本站所分享的内容会同步分享到csdn或稀土掘金这类程序员交流平台。
+部分内容会制作成视频上传至b站或YouTube。
 
 ## 技术栈
 
@@ -19,22 +22,10 @@ HmMcTechBlog 是我的个人开源技术博客，基于 **Vue 3 + Vite** 构建�
 | 路由 | Vue Router 4（hash 模式） |
 | 内容 | Markdown + front matter，构建期自动收集 |
 
-## 如何写新文章
+tips:技术博客里会有作者提的一些问题，并给出解答。
 
-往仓库 `posts/` 目录添加一个 `.md` 文件即可，无需改动任何代码：
+作者:hackmaster
+Email:3432454711@qq.com
+github:https://github.com/cmd0616
+稀土掘金:https://juejin.cn/user/1184637027885996
 
-```markdown
----
-title: 文章标题
-desc: 一句话摘要
-category: frontend
-tags: CSS, 前端
-date: 2026-09-27
----
-
-正文……
-```
-
-## 如何新增知识领域
-
-编辑 `src/config/site.js`，在 `CATEGORIES` 数组中加一行即可，全站自动生效。

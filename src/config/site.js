@@ -24,6 +24,7 @@
 export const CATEGORIES = [
   { key: 'frontend', name: '前端',   color: '#3b82f6', desc: 'HTML / CSS / JS / 框架与工程化' },
   { key: 'backend',  name: '后端',   color: '#10b981', desc: '服务端语言 / 数据库 / 中间件' },
+  { key: 'network',  name: '网络',   color: '#06b6d4', desc: 'TCP/IP / DNS / HTTP / 请求全链路' },
   { key: 'embedded', name: '嵌入式', color: '#f59e0b', desc: '单片机 / RTOS / 驱动与硬件' },
   { key: 'security', name: '安全',   color: '#ef4444', desc: 'Web 安全 / 逆向 / CTF 实战' },
   { key: 'arch',     name: '架构',   color: '#8b5cf6', desc: '系统设计 / 分布式 / 最佳实践' },
