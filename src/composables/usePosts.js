@@ -1,10 +1,14 @@
 /**
  * 文章数据层
  *
- * 新增文章 = 往 posts/ 目录丢一个 .md 文件，无需任何其他操作
+ * 新增文章 = 往 posts/ 目录（含任意层级子目录）丢一个 .md 文件，无需任何其他操作
  *
- * 构建时 Vite 会通过 import.meta.glob 自动收集所有 .md 原文，
+ * 构建时 Vite 会通过 import.meta.glob 递归收集所有 .md 原文，
  * 运行时解析 front matter 生成元数据。
+ *
+ * 注意两点：
+ *   1. slug 取自文件名本身，与它放在哪个子目录无关（移动文件不会改变 URL）
+ *   2. 侧边栏分类由 front matter 的 category 决定，与文件所在目录无关
  *
  * category: about 的文件被视为「独立页面」（如关于页），不参与文章列表。
  * category 支持 "a/b/c" 路径，自动生成多级文件夹（见 categoryTree）。
@@ -13,12 +17,13 @@ import { marked } from 'marked'
 import { getCategory } from '../config/site'
 import postMtimes from 'virtual:post-mtime'
 
-const RAW_POSTS = import.meta.glob('/posts/*.md', { query: '?raw', import: 'default', eager: true })
+/** 递归匹配：posts 下任意层级的 .md 都会被收录 */
+const RAW_POSTS = import.meta.glob('/posts/**/*.md', { query: '?raw', import: 'default', eager: true })
 
 /** 解析极简 front matter（key: value 行，tags 用逗号分隔） */
-function parseFrontMatter(raw, slug) {
+function parseFrontMatter(raw, slug, file) {
   const m = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/)
-  const meta = { slug }
+  const meta = { slug, file }
   let body = raw
 
   if (m) {
@@ -45,8 +50,23 @@ function parseFrontMatter(raw, slug) {
 }
 
 const all = Object.entries(RAW_POSTS)
-  .map(([path, raw]) => parseFrontMatter(raw, path.match(/([^/]+)\.md$/)[1]))
+  .map(([file, raw]) => parseFrontMatter(raw, file.match(/([^/]+)\.md$/)[1], file))
   .sort((a, b) => b.date.localeCompare(a.date))
+
+// slug 只看文件名，不同子目录下的同名文件会互相覆盖，这里提示而不是静默丢文章
+if (import.meta.env.DEV) {
+  const seen = new Map()
+  for (const p of all) {
+    if (seen.has(p.slug)) {
+      console.warn(
+        `[posts] slug 重复：「${p.slug}」同时存在于 ${seen.get(p.slug)} 和 ${p.file}，` +
+          `只有一篇会被显示，请重命名其中一个文件`
+      )
+    } else {
+      seen.set(p.slug, p.file)
+    }
+  }
+}
 
 /** 独立页面（category: about），如「关于本项目」 */
 export const pages = all.filter(p => p.category === 'about')

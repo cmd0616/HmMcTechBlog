@@ -1,4 +1,10 @@
-# vibe coding 一年，我终于明白：AI 没消灭屎山，只是让它长得更疯了
+---
+title: vibe coding 一年，我终于明白：AI 没消灭屎山，只是让它长得更疯了
+desc: 接手一个 Cursor vibe coding 项目后的吐槽：AI 让产出更快，却没让代码更好
+category: ai
+tags: AI, Cursor, 代码质量
+date: 2026-10-11
+---
 
 先说好，这篇不聊技术，就是纯吐槽。
 

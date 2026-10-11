@@ -60,6 +60,28 @@ date: 2026-09-26
 - 可选 front matter 字段：`updated`（最后更新时间）。不写时自动取 **git 最后提交时间**，
   未 init git 则回退文件修改时间。文末的「Last updated」与该值一致，想手动指定就写 `updated: 2026-09-27`
 
+### 用子文件夹堆放文章（可选）
+
+`posts/` 下面可以按分类建子目录，文章放进子目录同样会自动收录（递归匹配）：
+
+```
+posts/
+├── about.md                 # 独立页面
+├── network/
+│   └── what-happens-on-button-click.md
+└── frontend/
+    └── my-first-post.md
+```
+
+这是**本地的文件组织方式**，和上一节的「多级分类」是两回事，注意三条规则：
+
+- **slug 只看文件名**，与放在哪层目录无关：`posts/a/x.md` 和 `posts/b/x.md` 的 slug 都是 `x`，
+  同名只会显示一篇（开发时控制台会给出警告）。好处是移动文件不会改变已有链接的 URL
+- **子目录不影响侧边栏分类**：分类仍由 front matter 的 `category` 决定。
+  也就是说目录位置和 `category` 字段需要你自己保持一致 —— 若希望「目录即分类」，
+  那就别建子目录，直接用扁平结构 + `category`，只维护一份真相
+- 「Last updated」同样支持子目录内的文件
+
 ### 新增知识领域（以后远不止 5 个）
 
 编辑 `src/config/site.js`，加一行即可，侧边栏文件树、卡片标签配色全部自动生效。

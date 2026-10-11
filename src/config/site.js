@@ -28,10 +28,9 @@ export const CATEGORIES = [
   { key: 'embedded', name: '嵌入式', color: '#f59e0b', desc: '单片机 / RTOS / 驱动与硬件' },
   { key: 'security', name: '安全',   color: '#ef4444', desc: 'Web 安全 / 逆向 / CTF 实战' },
   { key: 'arch',     name: '架构',   color: '#8b5cf6', desc: '系统设计 / 分布式 / 最佳实践' },
+  { key: 'ai',       name: 'AI',     color: '#ec4899', desc: '机器学习 / LLM / Agent' },
   // 示例：在「前端」下开一个子文件夹（取消注释即可生效）
   // { key: 'frontend/css', name: 'CSS', color: '#0ea5e9', desc: '布局 / 选择器 / 新特性' },
-  // 示例：以后想加 AI 领域，取消下一行注释即可
-  // { key: 'ai', name: 'AI', color: '#ec4899', desc: '机器学习 / LLM / Agent' },
 ]
 
 /** 站点全局信息 */

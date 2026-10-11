@@ -15,8 +15,19 @@ function inGitRepo() {
   } catch { return false }
 }
 
+/** 递归收集 posts 下的 md 文件，返回相对 posts 目录的路径（用 / 分隔） */
+function collectMdFiles(dir, base = '') {
+  const out = []
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const rel = base ? `${base}/${entry.name}` : entry.name
+    if (entry.isDirectory()) out.push(...collectMdFiles(path.join(dir, entry.name), rel))
+    else if (entry.name.endsWith('.md')) out.push(rel)
+  }
+  return out
+}
+
 /**
- * 读取每篇文章的最后修改时间
+ * 读取每篇文章的最后修改时间（含子目录）
  * 优先级：git 最后一次提交时间（CI 上也准确）→ 文件 mtime（未 init git / 未提交时兜底）
  */
 function readPostTimes() {
@@ -25,20 +36,20 @@ function readPostTimes() {
 
   const useGit = inGitRepo()
   const times = {}
-  for (const name of fs.readdirSync(dir)) {
-    if (!name.endsWith('.md')) continue
-    const slug = name.replace(/\.md$/, '')
+  for (const rel of collectMdFiles(dir)) {
+    const slug = rel.match(/([^/]+)\.md$/)[1]
 
     let time = ''
     if (useGit) {
       try {
-        time = execSync(`git log -1 --format=%cI -- "${name}"`, {
+        // 查 git 要用相对仓库根目录的路径，带上 posts/ 前缀
+        time = execSync(`git log -1 --format=%cI -- "posts/${rel}"`, {
           cwd: ROOT,
           stdio: ['ignore', 'pipe', 'pipe'], // 屏蔽 stderr，异常不外泄到控制台
         }).toString().trim()
       } catch { /* 文件尚未提交等场景，回退 mtime */ }
     }
-    if (!time) time = fs.statSync(path.join(dir, name)).mtime.toISOString()
+    if (!time) time = fs.statSync(path.join(dir, rel)).mtime.toISOString()
 
     times[slug] = time
   }
