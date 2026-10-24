@@ -5,3 +5,6 @@ Thumbs.db
 *.local
 .vscode/
 .idea/
+
+# 后续博客的本地写作素材（草稿与配图，不上传 GitHub）
+SkillImprovement/
